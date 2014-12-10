@@ -1,0 +1,12 @@
+{
+    "name": "tekkie/crud-php",
+    "description": "Common interface for libraries dealing with data",
+    "keywords": ["crud", "php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Georgiana Gligor",
+            "email": "gb@tekkie.ro"
+        }
+    ]
+}
