@@ -8,5 +8,8 @@
             "name": "Georgiana Gligor",
             "email": "gb@tekkie.ro"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": { "Tc\\Crud": "" }
+    }
 }
