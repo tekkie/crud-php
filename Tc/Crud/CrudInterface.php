@@ -45,6 +45,6 @@ interface CrudInterface
     /**
      * Insert new or update existing item, if one exists
      */
-    public function upsert($item = null);
+    public function upsert($item = null, array $criteria = array());
     
 }
