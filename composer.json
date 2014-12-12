@@ -10,6 +10,6 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Tc\\Crud": "" }
+        "psr-0": { "Tc\\Crud\\": "" }
     }
 }

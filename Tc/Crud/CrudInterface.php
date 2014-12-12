@@ -5,7 +5,8 @@ namespace Tc\Crud;
 /**
  * Describes a data accessor API.
  */
-interface Crud
+interface CrudInterface
+
 {
     
     /**
