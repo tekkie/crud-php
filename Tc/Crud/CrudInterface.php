@@ -41,10 +41,17 @@ interface CrudInterface
      * @param object $item
      */
     public function delete($item);
+
+    /**
+     * Remove existing items, by criteria
+     *
+     * @param array $criteria
+     */
+    public function deleteMultiple(array $criteria = array());
     
     /**
      * Insert new or update existing item, if one exists
      */
-    public function upsert($item = null, array $criteria = array());
+    public function upsert($item = null, array $criteria = array(), array $isoDates = array());
     
 }
