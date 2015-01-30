@@ -6,7 +6,6 @@ namespace Tc\Crud;
  * Describes a data accessor API.
  */
 interface CrudInterface
-
 {
     
     /**
@@ -51,7 +50,30 @@ interface CrudInterface
     
     /**
      * Insert new or update existing item, if one exists
+     *
+     * @param object $item     Model to insert/update
+     * @param array  $criteria Used for search
+     * @param array  $isoDates Allows adding extra fields (key => value), stored as ISO dates in mongo
      */
     public function upsert($item = null, array $criteria = array(), array $isoDates = array());
-    
+
+    /**
+     * Count number of documents in collection
+     *
+     * @param array $criteria
+     *
+     * @return int
+     */
+    public function count(array $criteria = array());
+
+    /**
+     * Retrieve a list of distinct values of the given key from collection
+     *
+     * @param string $key
+     * @param array  $criteria
+     *
+     * @return array
+     */
+    public function distinct($key, array $criteria = array());
+
 }
