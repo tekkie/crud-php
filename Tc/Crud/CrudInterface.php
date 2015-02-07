@@ -45,8 +45,9 @@ interface CrudInterface
      * Remove existing items, by criteria
      *
      * @param array $criteria
+     * @param array $options
      */
-    public function deleteMultiple(array $criteria = array());
+    public function deleteMultiple(array $criteria = array(), array $options = array());
     
     /**
      * Insert new or update existing item, if one exists
