@@ -59,6 +59,24 @@ interface CrudInterface
     public function upsert($item = null, array $criteria = array(), array $isoDates = array());
 
     /**
+     * Insert new or update existing item, if one exists, only using specific fields
+     *
+     * @param object $item           Model to insert/update
+     * @param array  $criteria       Used for search
+     * @param array  $isoDates       Allows adding extra fields (key => value), stored as ISO dates in mongo
+     * @param array  $fields         Allows selection of which fields to use from $item HINT: use JMS SerializedName
+     * @param array  $fieldsOnInsert Allows selection of which fields to be updating only when inserting, and not when updating HINT: use JMS SerializedName
+     */
+    public function upsertPartial
+    (
+        $item = NULL,
+        array $criteria = array(),
+        array $isoDates = array(),
+        array $fields = array(),
+        array $fieldsOnInsert = array()
+    );
+
+    /**
      * Count number of documents in collection
      *
      * @param array $criteria
